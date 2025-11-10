@@ -1,0 +1,16 @@
+{
+  "name": "voicemeeter-web-panel",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "pnpm --filter backend start:dev",
+    "dev:frontend": "pnpm --filter frontend dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+require('dotenv').config({ quiet: true })
+
+const createExpressApp = require('./servers/express-server')
+const createHttpServer = require('./servers/http-server')
+const initSocketServer = require('./servers/socket-server')
+
+const PORT = process.env.PORT || 3000
+
+const app = createExpressApp()
+const httpServer = createHttpServer(app)
+initSocketServer(httpServer)
+
+httpServer.listen(PORT, () => {
+    console.log(`🚀 Voicemeeter backend running on: http://localhost:${PORT}`)
+})
