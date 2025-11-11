@@ -3,14 +3,106 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Voicemeeter</title>
+    </head>
+    <body>
+        <h1>🎧 VoiceMeeter WebPanel</h1>
+        <p>Control remoto y automatización vía web</p>
+
+        <div class="links">
+            <div class="card">
+                <h2>📊 Dashboard</h2>
+                <p>Controla y visualiza el estado general</p>
+                <a href="./dashboard">Ir al Dashboard</a>
+            </div>
+
+            <div class="card">
+                <h2>🎛️ VBAN Buttons</h2>
+                <p>Envía comandos personalizados de VoiceMeeter</p>
+                <a href="./buttons">Ir a los Botones</a>
+            </div>
+        </div>
+
+        <footer>VoiceMeeter WebPanel © 2025</footer>
+    </body>
 </html>
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(circle at 30% 20%, #1c1c1c, #000);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 15px #00ffe0;
+        text-align: center;
+    }
+
+    p {
+        color: #bbb;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .card {
+        background: #111;
+        border: 1px solid #222;
+        border-radius: 12px;
+        padding: 2rem;
+        width: 220px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+        transition: all 0.25s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1rem;
+        display: block;
+        margin-top: 1rem;
+        background: linear-gradient(90deg, #00ffe0, #007bff);
+        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        background: linear-gradient(90deg, #00b8ff, #00ff9d);
+        transform: scale(1.05);
+    }
+
+    footer {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>
